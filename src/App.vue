@@ -1,16 +1,17 @@
 <template>
-<div>
-  App
+<div id="app">
+  <router-view></router-view>
+  <FooterGuide/>
 </div>
 </template>
 <script>
-//  import Temp from './components/Temp'
+import FooterGuide from './components/FooterGuide/FooterGuide'
 export default{
   props: {
 
   },
   components: {
-    //  Temp
+    FooterGuide
   },
   data () {
     return {
@@ -20,5 +21,9 @@ export default{
 }
 </script>
 <style lang="stylus" ref="stylesheet/stylus">
-
+#app
+  width 100%
+  height 100%
+  background #f5f5f5
+  position relative
 </style>
