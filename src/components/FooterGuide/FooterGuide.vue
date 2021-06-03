@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer_guide">
+  <footer class="footer_guide" v-show="$route.meta.footerShow">
     <a href="javascript:;" class="guide_item" :class="{on:'/msite'===$route.path}" @click="goTo('/msite')">
       <span class="item_icon">
         <i class="iconfont icon-waimai"></i>
@@ -48,6 +48,7 @@ export default{
 }
 </script>
 <style lang="stylus" ref="stylesheet/stylus">
+  @import "../../common/stylus/mixins.styl"
   .footer_guide  //footer
     top-border-1px(#e4e4e4)
     position fixed
